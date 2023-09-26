@@ -1,0 +1,136 @@
+@import "variables";
+
+
+// start to static header
+.auth-background {
+    background-color: #754C29;
+    padding: 100px 0;
+    overflow-y: auto;
+    height: 100vh;
+    position: relative;
+    @media (max-width: $screen-xl) {
+      padding: 80px 0;   
+    }
+    @media (max-width: $screen-md) {
+      padding: 50px 0;
+    }
+    &.default-height {
+        height: auto;
+    }
+}
+
+.auth-img {
+    position: absolute;
+    @include dir-right(0);
+    width: 50%;
+    top: 15px;
+}
+
+.custom-layout {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px gray;
+}
+
+.custom-form-width {
+    width: 500px;
+    max-width: 100%;
+}
+
+.custom-form {
+    .head-form {
+        text-align: center;
+        margin-bottom: 40px;
+        .form-logo {
+            max-width: 90px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            @media (max-width: $screen-xs) {
+              max-width: 70px;
+            }
+        }
+    }
+}
+
+.form-padding {
+    padding: 30px;
+    @media (max-width: $screen-xs) {
+        padding: 25px 15px;
+    }
+}
+
+.tabsBtns {
+    .custom-btn {
+        background-image: linear-gradient(to top, #c2c2c2, #c2c2c2);
+        &:hover {
+            .bt-text {
+                color: #000 !important;
+            }
+        }
+        .bt-text {
+            color: #000;
+        }
+    }
+    .single_btn_tab {
+        &.active {
+            background-image: linear-gradient(to top, #161b4b, #161b4b);
+            .bt-text {
+                color: #fff;
+            }
+
+            &:hover {
+                .bt-text {
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+}
+
+.cl-purple {
+    color: #EE3F7C;
+}
+
+.services-box {
+    position: relative;
+    height: 100%;
+    margin-bottom: 20px;
+    .box-img {
+        margin-bottom: 10px;
+    }
+    .service-img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        border-radius: 4px;
+        @media (max-width: $screen-xs) {
+          height: 150px;
+        }
+    }
+    .accept-check {
+        position: absolute;
+        top: 15px;
+        @include dir-right(15px);
+        margin: 0;
+        @include dir-margin-right(0px !important);
+        .span-check {
+            @include dir-margin-right(0 !important);
+            background-color: #fff;
+        }
+    }
+
+    .service-text {
+        text-align: center;
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .hint-text {
+            font-size: 14px;
+            &:not(:last-child) {
+                margin-bottom: 6px;
+            }
+        }
+    }
+}
