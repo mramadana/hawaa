@@ -372,10 +372,10 @@
     <script src="js/main.js"></script>
 
     <script>
-        let flatpickr_function = (parent_flatpicker) => {
-            var startDateInput = parent_flatpicker.find(".start-date");
-            var endDateInput = parent_flatpicker.find(".end-date");
-    
+        let flatpickr_function = () => {
+            var startDateInput = $(".start-date");
+            var endDateInput = $(".end-date");
+
             // Initialize the Flatpickr datepicker for the start date input
             startDateInput.flatpickr({
                 disableMobile: true,
@@ -388,7 +388,7 @@
                     });
                 }
             });
-    
+
             // Initialize the Flatpickr datepicker for the end date input
             endDateInput.flatpickr({
                 disableMobile: true,
@@ -401,54 +401,58 @@
                     });
                 }
             });
-    
+
             let isRtl = $('html[lang="ar"]').length > 0;
-            parent_flatpicker.find(".select-plugin").select2({
+            $(".select-plugin").select2({
                 dir: isRtl ? "rtl" : "ltr",
                 minimumResultsForSearch: Infinity,
             });
         }
-    
-        flatpickr_function($(".date-inputs")); // Initial call
-    
+        flatpickr_function()
     </script>
-    
+
     <!-- js append item -->
     
     <script>
+
         $(document).on('click', '.button-add-items', function () {
-            let parent_flatpicker = $("<div class='time-info col-12'>").html(`
-                <div class="parent-inputs">
-                    <div class="form-group select-2-input edit-select" style="flex-grow: 1;">
-                        <select name="" id="" class="select-plugin">
-                            <option value="" selected disabled>اليوم</option>
-                            <option value="">السبت</option>
-                            <option value="">الاحد</option>
-                            <option value="">الإثنين</option>
-                            <option value="">الثلاثاء</option>
-                            <option value="">الاربعاء</option>
-                            <option value="">الخميس</option>
-                            <option value="">الجمعه</option>
-                        </select>
+
+            let item =
+                `<div class="time-info col-12">
+                    <div class="parent-inputs">
+                        <div class="form-group select-2-input edit-select" style="flex-grow: 1;">
+                            <select name="" id="" class="select-plugin">
+                                <option value="" selected disabled>اليوم</option>
+                                <option value="">السبت</option>
+                                <option value="">الاحد</option>
+                                <option value="">الإثنين</option>
+                                <option value="">الثلاثاء</option>
+                                <option value="">الاربعاء</option>
+                                <option value="">الخميس</option>
+                                <option value="">الجمعه</option>
+                            </select>
+                        </div>
+                        <div class="date-inputs form-group">
+                            <input type="text" id="" class="main-input input-date start-date"
+                                placeholder="من :">
+                            <input type="text" id="" class="main-input input-date end-date"
+                                placeholder="الي :">
+                        </div>
                     </div>
-                    <div class="date-inputs form-group">
-                        <input type="text" id="" class="main-input input-date start-date" placeholder="من :">
-                        <input type="text" id="" class="main-input input-date end-date" placeholder="الي :">
-                    </div>
-                </div>
-                <div class="style-btn orange-btn remove-item"><i class="fas fa-times-circle"></i></div>
-            `);
-    
-            $(this).parents('.profile-details').find(".appended-item").append(parent_flatpicker);
-    
-            flatpickr_function(parent_flatpicker);
-        });
-    
+                    <div class="style-btn orange-btn remove-item"><i class="fas fa-times-circle"></i></div>
+                 </div>`
+
+            $(this).parents('.profile-details').find(".appended-item").append(item);
+
+            flatpickr_function()
+        })
+
         $(document).on('click', ".remove-item", function() {
             $(this).parents(".time-info").remove()
-        });
+        })
+
+
     </script>
-    
 
 </body>
 

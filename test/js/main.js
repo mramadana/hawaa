@@ -153,38 +153,6 @@ $(document).ready(function () {
     location.reload();
   });
 
-
-  $(".table").DataTable({
-    responsive: true,
-    ordering: false,
-    bPaginate: true,
-    searching: false,
-    select: false,
-    
-    language: {
-      sProcessing: "جارٍ التحميل...",
-      sLengthMenu: "<p class='hint-select'>اظهار عدد _MENU_  </p>",
-      sZeroRecords: "لم يعثر على أية سجلات",
-      sInfo: "إظهار _START_ - _END_      ",
-      sInfoEmpty: "اظهار  0 إلى 0 من . 0 سجل",
-      sInfoFiltered: "(منتقاة من مجموع _MAX_ مُدخل)",
-      sInfoPostFix: "",
-      sSearch:
-        "<button type='submit' class='filter-btn'><i class='far fa-search'></i></button> ",
-      searchPlaceholder: "اكتب كلمة بحثك",
-      sUrl: "",
-      oPaginate: {
-        sFirst: "الأول",
-        sPrevious: "<i class='fa fa-angle-right' ></i>",
-        sNext: "<i class='fa fa-angle-left' ></i>",
-        sLast: "الأخير",
-      },
-    },
-    
-  });
-
-   $('.dataTables_length').parent().remove();
-
   // if(localStorage.getItem("spruhartl"))
 
   if (localStorage.getItem("spruhaltr")) {

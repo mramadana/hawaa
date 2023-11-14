@@ -18,7 +18,7 @@ body {
   }
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(to right, #3a3239, #AC5A9F);
+    background-image: linear-gradient(to right, #f2b540, #754c29);
 
     border-radius: 3px;
   }
@@ -121,7 +121,7 @@ body {
   transition: all 0.5s ease-in-out;
   overflow: hidden;
   position: relative;
-  background-image: linear-gradient(to top, #AC5A9F, #AC5A9F);
+  background-image: linear-gradient(to top, #754C29, #754C29);
   box-shadow: 0 0 3px rgba(20, 36, 68, 50%);
   color: #fff;
   &.md {
@@ -167,7 +167,7 @@ body {
         font-size: 15px;
         color: #000;
         &.cl-red {
-          color: #AC5A9F;
+          color: #754c29;
         }
       }
       button {
@@ -245,7 +245,7 @@ body {
 }
 
 .new-sign a, .text-decoration {
-  color: #AC5A9F;
+  color: #754C29;
   text-decoration: underline !important;
   margin-inline-start: 5px;
 }
@@ -363,7 +363,7 @@ body {
       }
     }
     .select2-selection__choice {
-      background-color: #AC5A9F;
+      background-color: #754c29;
       border: 0;
       margin-top: 0;
       color: #fff;
@@ -401,7 +401,7 @@ body {
     align-items: center;
     justify-content: center;
     color: #ffffff;
-    background-color: #AC5A9F;
+    background-color: #754c29;
     border-radius: 50%;
     font-style: normal;
     cursor: pointer;
@@ -472,7 +472,7 @@ body {
   .remove-img {
     position: absolute;
     top: 3px;
-    background-color: #AC5A9F;
+    background-color: #754c29;
     color: #fff;
     font-size: 12px;
     padding: 5px;
@@ -512,8 +512,8 @@ body {
     }
   }
   .box-check:checked + .check-inner .span-check {
-    background-color: #AC5A9F;
-    border-color: #AC5A9F;
+    background-color: #754c29;
+    border-color: #754c29;
     i {
       display: block;
     }
@@ -812,7 +812,7 @@ body {
   }
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background-color: #AC5A9F;
+    background-color: #754c29;
 
     border-radius: 2px;
   }
@@ -831,7 +831,7 @@ body {
 .notif-title,
 .notif-anchor {
   padding: 10px 15px;
-  background: #AC5A9F;
+  background: #754c29;
   color: #fff;
   display: block;
   font-size: 14px;
@@ -1131,7 +1131,7 @@ body {
       @include dir-right(15px);
       top: 15px;
       font-size: 25px;
-      color: #AC5A9F;
+      color: #754c29;
       cursor: pointer;
       transition: 0.3s;
       font-weight: 900;
@@ -1164,7 +1164,7 @@ body {
     }
     /* Handle */
     &::-webkit-scrollbar-thumb {
-      background-image: linear-gradient(to right, #3a3239, #AC5A9F);
+      background-image: linear-gradient(to right, #f2b540, #754c29);
 
       border-radius: 3px;
     }
@@ -1257,7 +1257,7 @@ body {
         top: 0;
         width: 100%;
         height: 100%;
-        background: #AC5A9F;
+        background: #754c29;
         // opacity: 0.5;
         position: absolute;
         transition: 0.5s;
@@ -1393,7 +1393,7 @@ body {
   height: calc(100% - 25px);
   width: 100%;
   &.active {
-    background-color: #AC5A9F;
+    background-color: #754c29;
     .hint,
     .title {
       color: #fff;
@@ -1531,7 +1531,7 @@ body {
     }
   }
   .anchor-details {
-    color: #AC5A9F;
+    color: #754c29;
     font-size: 16px;
   }
 }
@@ -1572,21 +1572,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     &:not(:last-child) {
       @include dir-margin-right(10px);
     }
     &:first-child,
     &:last-child {
       background-color: #f3f3f3;
-      width: 30px;
-      height: 30px;
+      width: 38px;
+      height: 38px;
       overflow: hidden;
       transition: 0.3s;
       font-size: 18px;
       &:hover {
-        background-color: #AC5A9F;
+        background-color: #754c29;
         .page-link {
           color: #fff;
         }
@@ -1602,7 +1602,7 @@ body {
     }
     &.active,
     &:hover {
-      background-color: #AC5A9F;
+      background-color: #754c29;
       .page-link {
         color: #fff;
         background-color: inherit;
@@ -1717,7 +1717,7 @@ body {
         height: 40px;
         object-fit: cover;
         border-radius: 50%;
-        background: #AC5A9F;
+        background: #754c29;
       }
     }
     .close {
@@ -1730,7 +1730,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #AC5A9F;
+      background: #754c29;
       border-radius: 50%;
       opacity: 1;
       @media (max-width: $screen-xs) {
@@ -1807,7 +1807,7 @@ body {
       margin: 4px 0;
     }
     .title-hint {
-      color: #AC5A9F;
+      color: #754c29;
       font-size: 17px;
     }
 
@@ -1939,13 +1939,13 @@ body.modal-open {
   justify-content: center;
   flex-direction: column;
   z-index: 9999;
-  background: transparent linear-gradient(270deg, #3a3239 0%, #AC5A9F 80%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(270deg, #f2b540 0%, #754c29 80%) 0% 0% no-repeat padding-box;
   .load {
     width: 250px;
     height: 10px;
     border-radius: 6px;
     //   background-color: rgba(255, 255, 255, 0.2);
-    background-color: #AC5A9F;
+    background-color: #754c29;
     margin-top: 20px;
     overflow: hidden;
     position: relative;
@@ -1956,7 +1956,7 @@ body.modal-open {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #3a3239;
+      background-color: #f2b540;
       animation: loader 1.2s infinite linear forwards;
     }
   }
@@ -2110,7 +2110,7 @@ body.modal-open {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #AC5A9F;
+    background: #754c29;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2362,7 +2362,7 @@ body.modal-open {
     background-color: #161b4b;
   }
   &.orange-btn {
-    background-color: #AC5A9F;
+    background-color: #754c29;
   }
 }
 
@@ -2399,7 +2399,7 @@ body.modal-open {
 
 .footer-box-img {
   position: relative;
-  background: #AC5A9F;
+  background: #754C29;
   margin: 50px 25px 10px;
   border-radius: 7px;
   height: 150px;
@@ -2443,7 +2443,7 @@ body.modal-open {
       color: #000;
       font-size: 15px;
       &.active {
-        background-color: #AC5A9F;
+        background-color: #754c29;
         color: #fff;
       }
     }
