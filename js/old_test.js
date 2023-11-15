@@ -7,9 +7,9 @@ $(window).on("load", function () {
 });
 
 $(document).ready(function () {
-  "use strict";
-
+  // "use strict";
   let isRtl = $('html[lang="ar"]').length > 0;
+
 
   // select-2 without search
   $(".select-plugin").select2({
@@ -152,7 +152,16 @@ $(document).ready(function () {
     setLtrDir();
     location.reload();
   });
- 
+  
+
+  if (localStorage.getItem("spruhaltr")) {
+    setLtrDir();
+    
+  } 
+
+  if (localStorage.getItem("spruhartl")) {
+    setRtlDir();
+  }
 
   if ($(".table").length > 0) {
     let tableLang = {};
@@ -161,7 +170,7 @@ $(document).ready(function () {
       sProcessing: "جارٍ التحميل...",
       sLengthMenu: "<p class='hint-select'>اظهار عدد _MENU_  </p>",
       sZeroRecords: "لم يعثر على أية سجلات",
-      sInfo: "إظهار _START_ - _END_      ",
+      sInfo: "show _START_ - _END_      ",
       sInfoEmpty: "اظهار  0 إلى 0 من . 0 سجل",
       sInfoFiltered: "(منتقاة من مجموع _MAX_ مُدخل)",
       sInfoPostFix: "",
@@ -179,7 +188,7 @@ $(document).ready(function () {
 
     let enTable = {
       sProcessing: "جارٍ التحميل...",
-      sLengthMenu: "<p class='hint-select'>show number _MENU_  </p>",
+      sLengthMenu: "<p class='hint-select'>اظهار عhhhhhhhhhhh_MENU_  </p>",
       sZeroRecords: "لم يعثر على أية سجلات",
       sInfo: "show _START_ - _END_      ",
       sInfoEmpty: "اظهار  0 إلى 0 من . 0 سجل",
@@ -198,14 +207,8 @@ $(document).ready(function () {
     };
     
 
-    
-    if(localStorage.getItem("spruhaltr")) {
-      tableLang = enTable
-      console.log(tableLang);
-    } else {
-      tableLang = arTable
-      console.log(tableLang);
-    }
+    isRtl ? tableLang = arTable : tableLang = enTable
+
     $(".table").dataTable({
       responsive: true,
       ordering: false,
@@ -216,20 +219,8 @@ $(document).ready(function () {
       language: tableLang
       
     });
-
-    $('.dataTables_length').parent().remove();
-  }
-
-  if (localStorage.getItem("spruhaltr")) {
-    setLtrDir();
-  }
-
-  if (localStorage.getItem("spruhartl")) {
-    setRtlDir();
   }
 });
-
-
 
 
 
